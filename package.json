@@ -6,8 +6,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "parcel watch src/**/*.* && parcel src/index.html --open",
-    "build": "parcel build --dist-dir docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build src/index.html --public-url /html-tmp/",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,11 @@
     "url": "https://github.com/sergebast/html-tmp/issues"
   },
   "homepage": "https://github.com/sergebast/html-tmp#readme",
+  "publicUrl": "/html-tmp",
   "devDependencies": {
     "@parcel/config-default": "^2.9.1",
     "@parcel/transformer-sass": "^2.9.1",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.9.1",
     "parcel-reporter-clean-dist": "^1.0.4"
   }
