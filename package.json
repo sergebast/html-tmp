@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "dev": "parcel watch src/**/*.* && parcel src/index.html --open",
+    "dev": "parcel src/index.html --open",
     "build": "parcel build src/index.html --public-url /html-tmp/",
     "deploy": "npm run build && gh-pages -d dist"
   },
